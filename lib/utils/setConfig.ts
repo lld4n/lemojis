@@ -1,4 +1,7 @@
-import type {emojiPickPropsOptionalType, emojiPickPropsType} from "../types/emoji";
+import type {
+  emojiPickPropsOptionalType,
+  emojiPickPropsType,
+} from "../types/emoji";
 
 const clickDefault = () => {
   console.log(123);
@@ -29,7 +32,6 @@ export default function (
     emojiVersion: props.emojiVersion || "15.0",
     defaultTone: props.defaultTone || "neutral",
     lazyLoad: props.lazyLoad || true,
-    recently: [],
     click: props.click || clickDefault,
   };
 }
@@ -46,13 +48,12 @@ export const defaultConfig: emojiPickPropsType = {
     defaultEmoji: 1,
   },
   height: 400,
-  width: 300,
+  width: 350,
   style: "native",
   custom: [],
   language: "en",
   emojiVersion: "15.0",
   defaultTone: "neutral",
   lazyLoad: true,
-  recently: [],
   click: clickDefault,
 };

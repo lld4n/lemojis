@@ -6,15 +6,14 @@ export interface emojiPickPropsType {
   searchAutoFocus: boolean;
   previewEnabled: boolean;
   previewConfig: emojiPickPreviewConfig;
-  height: emojiPickSizeType;
-  width: emojiPickSizeType;
+  height: number;
+  width: number;
   style: emojiPickStyleType;
   custom: emojiPickCustomType[];
   language: emojiPickLanguageType;
   emojiVersion: string;
   defaultTone: emojiPickToneType;
   lazyLoad: boolean;
-  recently: string[];
   click: () => void;
 }
 
@@ -24,8 +23,6 @@ export interface emojiPickPreviewConfig {
   defaultEmoji: number;
   defaultCaption: string;
 }
-
-export type emojiPickSizeType = string | number;
 
 export type emojiPickToneType =
   | "neutral"
