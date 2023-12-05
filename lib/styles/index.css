@@ -138,7 +138,10 @@
 
 /* List */
 .ac421ee2__list {
+  overflow-y: auto;
   flex: 1;
+}
+.ac421ee2__list-item {
 }
 
 .ac421ee2 {

@@ -1,4 +1,8 @@
-export const category = {
+export const category: {
+  [key: string]: {
+    [key: string]: string[];
+  };
+} = {
   Symbols: {
     keycap: [
       "0",

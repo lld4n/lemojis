@@ -46,3 +46,14 @@ export interface emojiPickCustomType {
   url: string;
   snippet: string;
 }
+
+export type categoryType =
+  | "Smileys & Emotion"
+  | "People & Body"
+  | "Animals & Nature"
+  | "Travel & Places"
+  | "Activities"
+  | "Food & Drink"
+  | "Objects"
+  | "Symbols"
+  | "Flags";
