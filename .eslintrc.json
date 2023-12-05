@@ -10,8 +10,9 @@
     "no-trailing-spaces": "off",
     "object-curly-spacing": "off",
     "semi": "off",
-    "no-console": "warn",
-    "prefer-let/prefer-let": "off"
+    "no-console": "off",
+    "prefer-let/prefer-let": "off",
+    "no-unused-vars": "off"
   },
   "ignorePatterns": ["playground"]
 }
