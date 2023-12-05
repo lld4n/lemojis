@@ -1,11 +1,12 @@
 import ky from "ky";
-import * as fs from 'fs';
+import * as fs from "fs";
 import type { Emoji, EmojiOriginal } from "./types.js";
 import { skins } from "./constants.js";
 
-
 async function createFirst() {
-  const json = ky.get("https://cdn.jsdelivr.net/npm/emoji-datasource/emoji.json");
+  const json = ky.get(
+    "https://cdn.jsdelivr.net/npm/emoji-datasource/emoji.json",
+  );
   const data: Array<EmojiOriginal> = await json.json();
   let obj: {
     [key: string]: Emoji;
@@ -50,7 +51,9 @@ async function createFirst() {
 }
 
 async function createSecond() {
-  const json = ky.get("https://cdn.jsdelivr.net/npm/emoji-datasource/emoji.json");
+  const json = ky.get(
+    "https://cdn.jsdelivr.net/npm/emoji-datasource/emoji.json",
+  );
   const data: Array<EmojiOriginal> = await json.json();
   let obj: {
     [key: string]: {
@@ -69,9 +72,9 @@ async function createSecond() {
       obj[data[i].category][data[i].subcategory] = [String(i)];
     }
   }
-  let file = "export const category = " + JSON.stringify(obj) + ";";
+  let file = "export const categoryList = " + JSON.stringify(obj) + ";";
   console.log(Object.keys(obj).length);
-  fs.writeFileSync("../lib/data/category.ts", file);
+  fs.writeFileSync("../lib/data/categoryList.ts", file);
 }
 
 await createFirst();

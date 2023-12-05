@@ -1,10 +1,11 @@
 .ac421ee2 {
   --ac421ee2-bg: #fff;
-  --ac421ee2-gray: #e9ebec;
-  --ac421ee2-light-gray: #fafafa;
-  --ac421ee2-accent: #0085ee;
-  --ac421ee2-light-accent: #eaf5ff;
-  --ac421ee2-text: #677682;
+  --ac421ee2-gray: #cad1d9;
+  --ac421ee2-light-gray: #f5f7f9;
+  --ac421ee2-accent: #1561cf;
+  --ac421ee2-light-accent: #dbf2fe;
+  --ac421ee2-text: #1d2024;
+  --ac421ee2-hover: #dedede;
 }
 @media (prefers-color-scheme: dark) {
   .ac421ee2 {
@@ -26,11 +27,12 @@
 }
 .ac421ee2[data-theme="light"] {
   --ac421ee2-bg: #fff;
-  --ac421ee2-gray: #e9ebec;
-  --ac421ee2-light-gray: #fafafa;
-  --ac421ee2-accent: #0085ee;
-  --ac421ee2-light-accent: #eaf5ff;
-  --ac421ee2-text: #677682;
+  --ac421ee2-gray: #cad1d9;
+  --ac421ee2-light-gray: #f5f7f9;
+  --ac421ee2-accent: #1561cf;
+  --ac421ee2-light-accent: #dbf2fe;
+  --ac421ee2-text: #1d2024;
+  --ac421ee2-hover: #dedede;
 }
 .ac421ee2 {
   display: flex;
@@ -40,19 +42,44 @@
   color: var(--ac421ee2-text);
   background-color: var(--ac421ee2-bg);
   font-family: inherit;
+  line-height: 1;
 }
 /* Category */
 .ac421ee2__category {
   display: flex;
   gap: 3px;
-  padding: 8px 10px 10px 10px;
-  border-bottom: 1px solid  var(--ac421ee2-gray);
+  padding: 6px 10px;
+  border-bottom: 1px solid var(--ac421ee2-gray);
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
+.ac421ee2__category::-webkit-scrollbar {
+  display: none;
+}
+
 .ac421ee2__category-item {
-  background-color: var(--ac421ee2-text);
-  width: 20px;
-  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  aspect-ratio: 1 / 1;
   border-radius: 3px;
+}
+.ac421ee2__category-item.active {
+  background-color: var(--ac421ee2-light-accent);
+}
+.ac421ee2__category-item.active svg path {
+  fill: var(--ac421ee2-accent);
+}
+.ac421ee2__category-item svg path {
+  fill: var(--ac421ee2-text);
+}
+
+.ac421ee2__category-item:hover {
+  background-color: var(--ac421ee2-light-accent);
 }
 
 /* Nav */
@@ -73,8 +100,6 @@
 .ac421ee2__list {
   flex: 1;
 }
-
-
 
 .ac421ee2 {
 }
