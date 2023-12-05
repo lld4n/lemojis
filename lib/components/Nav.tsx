@@ -8,7 +8,7 @@ export default function Nav() {
     return (
       <div className="ac421ee2__nav">
         {context.searchEnabled && <Search />}
-        {context.skinTonesEnabled && <div></div>}
+        {context.skinTonesEnabled && <></>}
       </div>
     );
   } else {

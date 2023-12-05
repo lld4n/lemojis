@@ -3,7 +3,7 @@ import Lemojis from "../lib/Lemojis";
 function App() {
   return (
     <div className="App" data-theme="light">
-      <Lemojis theme="light" />
+      <Lemojis theme="light" searchAutoFocus />
     </div>
   );
 }
