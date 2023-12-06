@@ -22,7 +22,7 @@ export default function (
     previewConfig: props.previewConfig || {
       defaultCaption:
         props.language === "en" ? "What's Your Mood?" : "Какой ты сегодня?",
-      defaultEmoji: 1,
+      defaultEmoji: "1063",
     },
     height: props.height || 400,
     width: props.width || 300,
@@ -45,7 +45,7 @@ export const defaultConfig: emojiPickPropsType = {
   previewEnabled: true,
   previewConfig: {
     defaultCaption: "What's Your Mood?",
-    defaultEmoji: 1,
+    defaultEmoji: "1063",
   },
   height: 400,
   width: 350,

@@ -27,7 +27,7 @@ export default function Emoji({ index }: { index: string }) {
   }
 
   return (
-    <div className="ac421ee2__emoji-clickable" role="button">
+    <div className="ac421ee2__emoji-clickable" role="button" title={index}>
       <img
         className="ac421ee2__emoji-img"
         loading={context.lazyLoad ? "lazy" : "eager"}

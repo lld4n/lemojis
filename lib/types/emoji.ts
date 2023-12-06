@@ -20,7 +20,7 @@ export interface emojiPickPropsType {
 export type emojiPickPropsOptionalType = Partial<emojiPickPropsType>;
 
 export interface emojiPickPreviewConfig {
-  defaultEmoji: number;
+  defaultEmoji: string;
   defaultCaption: string;
 }
 

@@ -157,6 +157,7 @@
   flex: 1;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  padding-bottom: 30px;
 }
 .ac421ee2__list::-webkit-scrollbar {
   display: none;
@@ -216,6 +217,20 @@
   height: 5px;
   border-radius: 50%;
   background-color: var(--ac421ee2-accent);
+}
+
+/* Preview */
+.ac421ee2__preview {
+  position: relative;
+  z-index: 20;
+}
+.ac421ee2__preview-emoji {
+  position: absolute;
+  bottom: 0;
+  left: 3px;
+}
+.ac421ee2__preview-text {
+  padding: 10px 0 10px 70px;
 }
 
 .ac421ee2 {
