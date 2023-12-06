@@ -3,7 +3,7 @@ export type Emoji = {
   i: string;
   // unified
   u: string;
-  // has
+  // has apple, google, facebook, twitter
   h: [boolean, boolean, boolean, boolean];
   // skins
   s?: string[];

@@ -56,25 +56,24 @@ async function createSecond() {
   );
   const data: Array<EmojiOriginal> = await json.json();
   let obj: {
-    [key: string]: {
-      [key: string]: string[];
-    };
+    [key: string]: string[];
   } = {};
   for (let i = 0; i < data.length; i++) {
     if (obj[data[i].category]) {
-      if (obj[data[i].category][data[i].subcategory]) {
-        obj[data[i].category][data[i].subcategory].push(String(i));
-      } else {
-        obj[data[i].category][data[i].subcategory] = [String(i)];
-      }
+      obj[data[i].category].push(String(i));
     } else {
-      obj[data[i].category] = {};
-      obj[data[i].category][data[i].subcategory] = [String(i)];
+      obj[data[i].category] = [String(i)];
     }
   }
-  let file = "export const categoryList = " + JSON.stringify(obj) + ";";
+  for (let key in obj) {
+    obj[key] = obj[key]
+      .map(Number)
+      .sort((a, b) => a - b)
+      .map(String);
+  }
+  let file = "export const category = " + JSON.stringify(obj) + ";";
   console.log(Object.keys(obj).length);
-  fs.writeFileSync("../lib/data/categoryList.ts", file);
+  fs.writeFileSync("../lib/data/category.ts", file);
 }
 
 await createFirst();
