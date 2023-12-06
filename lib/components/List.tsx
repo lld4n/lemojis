@@ -5,6 +5,7 @@ import { emojis } from "../data/emojis";
 import Emoji from "./Emoji";
 import { WorkingContext } from "../providers/WorkingProvider";
 import { ConfigContext } from "../providers/ConfigProvider";
+import ListContent from "./ListContent";
 
 export default function List() {
   const context = React.useContext(ConfigContext);
@@ -12,19 +13,13 @@ export default function List() {
   return (
     <div
       className="ac421ee2__list"
-      onMouseLeave={() =>
-        working?.setPreview(context.previewConfig.defaultEmoji)
-      }
+      onMouseLeave={() => working?.setPreview(context.previewConfig)}
     >
       {categoryList.map((el) => {
         return (
           <div key={el.title} className="ac421ee2__list-item">
             <div className="ac421ee2__list-title">{el.title}</div>
-            <div key={el.title} className="ac421ee2__list-content">
-              {category[el.title].map((e) => {
-                return <Emoji index={e} key={e} />;
-              })}
-            </div>
+            <ListContent title={el.title} />
           </div>
         );
       })}

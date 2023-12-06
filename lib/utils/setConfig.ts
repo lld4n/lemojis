@@ -14,25 +14,19 @@ export default function (
   console.log("original", props);
   return {
     theme: props.theme ?? "auto",
-    skinTonesEnabled: props.skinTonesEnabled ?? true,
+    // skinTonesEnabled: props.skinTonesEnabled ?? true,
     searchEnabled: props.searchEnabled ?? true,
-    searchPlaceholder:
-      props.searchPlaceholder ??
-      (props.language === "en" ? "Search..." : "Поиск..."),
+    searchPlaceholder: props.searchPlaceholder ?? "Search...",
     searchAutoFocus: props.searchAutoFocus ?? false,
     previewEnabled: props.previewEnabled ?? true,
-    previewConfig: props.previewConfig ?? {
-      defaultCaption:
-        props.language === "en" ? "What's Your Mood?" : "Какой ты сегодня?",
-      defaultEmoji: "1063",
-    },
+    previewConfig: props.previewConfig ?? "1063",
     height: props.height ?? 400,
-    width: props.width ?? 300,
+    width: props.width ?? 350,
     style: props.style ?? "native",
     custom: props.custom ?? [],
-    language: props.language ?? "en",
+    // language: props.language ?? "en",
     emojiVersion: props.emojiVersion ?? "15.0",
-    defaultTone: props.defaultTone ?? "neutral",
+    // defaultTone: props.defaultTone ?? "neutral",
     lazyLoad: props.lazyLoad ?? true,
     click: props.click ?? clickDefault,
   };
@@ -40,22 +34,19 @@ export default function (
 
 export const defaultConfig: emojiPickPropsType = {
   theme: "auto",
-  skinTonesEnabled: true,
+  // skinTonesEnabled: true,
   searchEnabled: true,
   searchPlaceholder: "Search...",
   searchAutoFocus: false,
   previewEnabled: true,
-  previewConfig: {
-    defaultCaption: "What's Your Mood?",
-    defaultEmoji: "1063",
-  },
+  previewConfig: "1063",
   height: 400,
   width: 350,
   style: "native",
   custom: [],
-  language: "en",
+  // language: "en",
   emojiVersion: "15.0",
-  defaultTone: "neutral",
+  // defaultTone: "neutral",
   lazyLoad: true,
   click: clickDefault,
 };

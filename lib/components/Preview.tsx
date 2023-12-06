@@ -12,17 +12,13 @@ export default function Preview() {
     <div className="ac421ee2__preview">
       <div className="ac421ee2__preview-emoji">
         {context.style === "native" ? (
-          <>{parseUnified(working?.preview)}</>
+          <>{parseUnified(emojis[working?.preview || ""]?.u)}</>
         ) : (
           <img
             src={getUrl(context.style, emojis[working?.preview || ""]?.i)}
             alt=""
           />
         )}
-      </div>
-
-      <div className="ac421ee2__preview-text">
-        {context.previewConfig.defaultCaption}
       </div>
     </div>
   );

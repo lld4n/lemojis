@@ -3,9 +3,11 @@ import { parseUnified } from "../utils/parseUnified";
 import { emojis } from "../data/emojis";
 import { getUrl } from "../utils/getUrl";
 import { ConfigContext } from "../providers/ConfigProvider";
+import { WorkingContext } from "../providers/WorkingProvider";
 
 export default function SkinsEmoji({ index }: { index: string }) {
   const context = React.useContext(ConfigContext);
+  const working = React.useContext(WorkingContext);
   if (context.style === "native") {
     return <></>;
   }
@@ -13,6 +15,7 @@ export default function SkinsEmoji({ index }: { index: string }) {
     <div
       className="ac421ee2__emoji-clickable"
       onClick={() => context.click({ unified: emojis[index]?.u || "" })}
+      onMouseEnter={() => working?.setPreview(index)}
     >
       <img
         className="ac421ee2__emoji-img"

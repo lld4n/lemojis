@@ -6,19 +6,19 @@ export interface emojiReturnType {
 
 export interface emojiPickPropsType {
   theme: emojiPickThemeType;
-  skinTonesEnabled: boolean;
+  // skinTonesEnabled: boolean;
   searchEnabled: boolean;
   searchPlaceholder: string;
   searchAutoFocus: boolean;
   previewEnabled: boolean;
-  previewConfig: emojiPickPreviewConfig;
+  previewConfig: string;
   height: number;
   width: number;
   style: emojiPickStyleType;
   custom: emojiPickCustomType[];
-  language: emojiPickLanguageType;
+  // language: emojiPickLanguageType;
   emojiVersion: string;
-  defaultTone: emojiPickToneType;
+  // defaultTone: emojiPickToneType;
   lazyLoad: boolean;
   click: (emoji: emojiReturnType) => void;
 }
@@ -67,4 +67,6 @@ export type categoryType =
 export type workingContext = {
   preview: string;
   setPreview: React.Dispatch<React.SetStateAction<string>>;
+  tab: categoryType;
+  setTab: React.Dispatch<React.SetStateAction<categoryType>>;
 };

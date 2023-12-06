@@ -71,7 +71,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
+  /*cursor: pointer;*/
   width: 30px;
   height: 30px;
   aspect-ratio: 1 / 1;
@@ -86,9 +86,9 @@
 .ac421ee2__category-item svg path {
   fill: var(--ac421ee2-text);
 }
-.ac421ee2__category-item:hover {
-  background-color: var(--ac421ee2-light-accent);
-}
+/*.ac421ee2__category-item:hover {*/
+/*  background-color: var(--ac421ee2-light-accent);*/
+/*}*/
 
 /* Nav */
 .ac421ee2__nav {
@@ -169,7 +169,7 @@
   flex: 1;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  padding-bottom: 70px;
+  padding: 0 5px 120px 0;
 }
 .ac421ee2__list::-webkit-scrollbar {
   display: none;
@@ -242,12 +242,10 @@
   bottom: 5px;
   left: 5px;
   border-radius: 5px;
+  font-size: 70px;
   padding: 10px;
   backdrop-filter: blur(3px);
   background-color: var(--ac421ee2-bg-opacity);
-}
-.ac421ee2__preview-text {
-  padding: 10px 0 10px 90px;
 }
 
 .ac421ee2 {
