@@ -2,28 +2,22 @@ import React from "react";
 import { categoryList } from "../svgs/categoryList";
 import { category } from "../data/category";
 import { emojis } from "../data/emojis";
+import Emoji from "./Emoji";
 
 export default function List() {
   return (
     <div className="ac421ee2__list">
       {categoryList.map((el) => {
-        return Object.keys(category[el.title] || {}).map((key) => {
-          return (
-            <div className="ac421ee2__list-item" key={key}>
-              {category[el.title]?.[key]?.map((ee) => {
-                return (
-                  <img
-                    width={30}
-                    src={
-                      "https://cdn.jsdelivr.net/npm/emoji-datasource-apple/img/apple/64/" +
-                      emojis[ee]?.i
-                    }
-                  />
-                );
+        return (
+          <div key={el.title} className="ac421ee2__list-item">
+            <div className="ac421ee2__list-title">{el.title}</div>
+            <div key={el.title} className="ac421ee2__list-content">
+              {category[el.title].map((e) => {
+                return <Emoji index={e} key={e} />;
               })}
             </div>
-          );
-        });
+          </div>
+        );
       })}
     </div>
   );

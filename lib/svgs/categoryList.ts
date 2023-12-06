@@ -9,8 +9,9 @@ import Flag from "./Flag";
 import Carrot from "./Carrot";
 
 import type { FC } from "react";
+import type { categoryType } from "../types/emoji";
 export const categoryList: {
-  title: string;
+  title: categoryType;
   svg: FC;
 }[] = [
   { title: "Smileys & Emotion", svg: Smile },

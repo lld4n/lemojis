@@ -1,8 +1,6 @@
 import { Emoji } from "../../scripts/types";
 
-export const emojis: {
-  [key: string]: Emoji;
-} = {
+export const emojis: { [key: string]: Emoji } = {
   "0": {
     i: "0023-fe0f-20e3.png",
     u: "0023-FE0F-20E3",

@@ -1,5 +1,6 @@
 .ac421ee2 {
   --ac421ee2-bg: #fff;
+  --ac421ee2-bg-opacity: rgba(255, 255, 255, 0.8);
   --ac421ee2-gray: #cad1d9;
   --ac421ee2-light-gray: #f5f7f9;
   --ac421ee2-accent: #1561cf;
@@ -27,6 +28,7 @@
 }
 .ac421ee2[data-theme="light"] {
   --ac421ee2-bg: #fff;
+  --ac421ee2-bg-opacity: rgba(255, 255, 255, 0.8);
   --ac421ee2-gray: #cad1d9;
   --ac421ee2-light-gray: #f5f7f9;
   --ac421ee2-accent: #1561cf;
@@ -52,7 +54,6 @@
   display: flex;
   gap: 3px;
   padding: 6px 10px;
-  border-bottom: 1px solid var(--ac421ee2-gray);
 
   overflow-y: auto;
   scrollbar-width: none;
@@ -87,10 +88,24 @@
 
 /* Nav */
 .ac421ee2__nav {
+  border-bottom: 1px solid var(--ac421ee2-gray);
+  border-top: 1px solid var(--ac421ee2-gray);
   display: flex;
   align-items: center;
   gap: 10px;
   padding: 8px;
+}
+
+/* Skins */
+.ac421ee2__skins {
+  display: flex;
+  gap: 3px;
+}
+.ac421ee2__skins-item {
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  cursor: pointer;
 }
 
 /* Search */
@@ -140,8 +155,67 @@
 .ac421ee2__list {
   overflow-y: auto;
   flex: 1;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.ac421ee2__list::-webkit-scrollbar {
+  display: none;
 }
 .ac421ee2__list-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.ac421ee2__list-title {
+  align-items: center;
+  backdrop-filter: blur(3px);
+  background-color: var(--ac421ee2-bg-opacity);
+  display: flex;
+  height: 34px;
+  margin: 0;
+  position: sticky;
+  text-transform: capitalize;
+  top: 0;
+  width: 100%;
+  z-index: 12;
+  padding: 5px;
+}
+.ac421ee2__list-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+
+/* Emoji */
+
+.ac421ee2__emoji-clickable {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  font-size: 21px;
+  height: 40px;
+  aspect-ratio: 1 /1;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+}
+.ac421ee2__emoji-img {
+  width: 25px;
+  height: 25px;
+}
+.ac421ee2__emoji-clickable:hover {
+  background-color: var(--ac421ee2-hover);
+}
+.ac421ee2__emoji-skins {
+  position: absolute;
+  bottom: 1px;
+  right: 1px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--ac421ee2-accent);
 }
 
 .ac421ee2 {
