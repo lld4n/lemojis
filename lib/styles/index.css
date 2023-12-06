@@ -20,11 +20,13 @@
 }
 .ac421ee2[data-theme="dark"] {
   --ac421ee2-bg: #101216;
+  --ac421ee2-bg-opacity: rgba(16, 18, 22, 0.8);
   --ac421ee2-gray: #2b2f35;
-  --ac421ee2-light-gray: #1e2228;
-  --ac421ee2-accent: #0085ee;
-  --ac421ee2-light-accent: #eaf5ff;
+  --ac421ee2-light-gray: #05080c;
+  --ac421ee2-light-accent: #141D2D;
+  --ac421ee2-accent: #2B5EAE;
   --ac421ee2-text: #fff;
+  --ac421ee2-hover: #2a2d33;
 }
 .ac421ee2[data-theme="light"] {
   --ac421ee2-bg: #fff;
@@ -122,8 +124,10 @@
   background: var(--ac421ee2-light-gray);
   font-weight: 500;
   font-size: 14px;
+  color: var(--ac421ee2-text);
 }
 .ac421ee2__input:focus {
+  outline: none;
   border: 1px solid var(--ac421ee2-accent);
   background: var(--ac421ee2-bg);
 }
@@ -132,6 +136,9 @@
   top: 50%;
   transform: translateY(-50%);
   left: 7px;
+}
+.ac421ee2__magnifier path {
+  fill: var(--ac421ee2-text);
 }
 .ac421ee2__cross {
   position: absolute;
@@ -146,6 +153,9 @@
   aspect-ratio: 1/1;
   right: 7px;
   cursor: pointer;
+}
+.ac421ee2__cross svg path {
+  fill: var(--ac421ee2-text);
 }
 .ac421ee2__cross:hover {
   background-color: var(--ac421ee2-hover);

@@ -10,29 +10,30 @@ const clickDefault = () => {
 export default function (
   props: emojiPickPropsOptionalType,
 ): emojiPickPropsType {
+  console.log("original", props);
   return {
-    theme: props.theme || "auto",
-    skinTonesEnabled: props.skinTonesEnabled || true,
-    searchEnabled: props.searchEnabled || true,
+    theme: props.theme ?? "auto",
+    skinTonesEnabled: props.skinTonesEnabled ?? true,
+    searchEnabled: props.searchEnabled ?? true,
     searchPlaceholder:
-      props.searchPlaceholder ||
+      props.searchPlaceholder ??
       (props.language === "en" ? "Search..." : "Поиск..."),
-    searchAutoFocus: props.searchAutoFocus || false,
-    previewEnabled: props.previewEnabled || true,
-    previewConfig: props.previewConfig || {
+    searchAutoFocus: props.searchAutoFocus ?? false,
+    previewEnabled: props.previewEnabled ?? true,
+    previewConfig: props.previewConfig ?? {
       defaultCaption:
         props.language === "en" ? "What's Your Mood?" : "Какой ты сегодня?",
       defaultEmoji: "1063",
     },
-    height: props.height || 400,
-    width: props.width || 300,
-    style: props.style || "native",
-    custom: props.custom || [],
-    language: props.language || "en",
-    emojiVersion: props.emojiVersion || "15.0",
-    defaultTone: props.defaultTone || "neutral",
-    lazyLoad: props.lazyLoad || true,
-    click: props.click || clickDefault,
+    height: props.height ?? 400,
+    width: props.width ?? 300,
+    style: props.style ?? "native",
+    custom: props.custom ?? [],
+    language: props.language ?? "en",
+    emojiVersion: props.emojiVersion ?? "15.0",
+    defaultTone: props.defaultTone ?? "neutral",
+    lazyLoad: props.lazyLoad ?? true,
+    click: props.click ?? clickDefault,
   };
 }
 
