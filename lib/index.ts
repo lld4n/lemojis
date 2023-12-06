@@ -1,2 +1,3 @@
-export * from "./Lemojis";
-export * from "./utils/getUrl";
+import Lemojis from "./Lemojis";
+
+export { Lemojis };
