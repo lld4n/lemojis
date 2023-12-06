@@ -5,9 +5,11 @@ import NativeEmoji from "./NativeEmoji";
 import { getUrl } from "../utils/getUrl";
 import SkinsEmoji from "./SkinsEmoji";
 import { parseUnified } from "../utils/parseUnified";
+import { WorkingContext } from "../providers/WorkingProvider";
 
 export default function Emoji({ index }: { index: string }) {
   const context = React.useContext(ConfigContext);
+  const working = React.useContext(WorkingContext);
   if (emojis[index] === undefined) {
     return <></>;
   }
@@ -27,7 +29,13 @@ export default function Emoji({ index }: { index: string }) {
   }
 
   return (
-    <div className="ac421ee2__emoji-clickable" role="button" title={index}>
+    <div
+      className="ac421ee2__emoji-clickable"
+      role="button"
+      title={index}
+      onClick={() => context.click({ unified: emojis[index]?.u || "" })}
+      onMouseEnter={() => working?.setPreview(index)}
+    >
       <img
         className="ac421ee2__emoji-img"
         loading={context.lazyLoad ? "lazy" : "eager"}

@@ -23,8 +23,8 @@
   --ac421ee2-bg-opacity: rgba(16, 18, 22, 0.8);
   --ac421ee2-gray: #2b2f35;
   --ac421ee2-light-gray: #05080c;
-  --ac421ee2-light-accent: #141D2D;
-  --ac421ee2-accent: #2B5EAE;
+  --ac421ee2-light-accent: #141d2d;
+  --ac421ee2-accent: #2b5eae;
   --ac421ee2-text: #fff;
   --ac421ee2-hover: #2a2d33;
 }
@@ -50,7 +50,9 @@
   background-color: var(--ac421ee2-bg);
   font-family: inherit;
   line-height: 1;
+  overflow: hidden;
 }
+
 /* Category */
 .ac421ee2__category {
   display: flex;
@@ -167,7 +169,7 @@
   flex: 1;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  padding-bottom: 30px;
+  padding-bottom: 70px;
 }
 .ac421ee2__list::-webkit-scrollbar {
   display: none;
@@ -201,6 +203,7 @@
 /* Emoji */
 
 .ac421ee2__emoji-clickable {
+  user-select: none;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -236,11 +239,15 @@
 }
 .ac421ee2__preview-emoji {
   position: absolute;
-  bottom: 0;
-  left: 3px;
+  bottom: 5px;
+  left: 5px;
+  border-radius: 5px;
+  padding: 10px;
+  backdrop-filter: blur(3px);
+  background-color: var(--ac421ee2-bg-opacity);
 }
 .ac421ee2__preview-text {
-  padding: 10px 0 10px 70px;
+  padding: 10px 0 10px 90px;
 }
 
 .ac421ee2 {

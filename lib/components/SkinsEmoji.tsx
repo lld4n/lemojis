@@ -10,7 +10,10 @@ export default function SkinsEmoji({ index }: { index: string }) {
     return <></>;
   }
   return (
-    <div className="ac421ee2__emoji-clickable">
+    <div
+      className="ac421ee2__emoji-clickable"
+      onClick={() => context.click({ unified: emojis[index]?.u || "" })}
+    >
       <img
         className="ac421ee2__emoji-img"
         loading={context.lazyLoad ? "lazy" : "eager"}

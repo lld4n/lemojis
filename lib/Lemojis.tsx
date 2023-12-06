@@ -8,16 +8,19 @@ import Nav from "./components/Nav";
 import List from "./components/List";
 import Preview from "./components/Preview";
 import "./styles/index.css";
+import WorkingProvider from "./providers/WorkingProvider";
 export default function Lemojis(props: emojiPickPropsOptionalType) {
   const reformatProps = setConfig(props);
   return (
     <ConfigProvider props={reformatProps}>
-      <Wrapper>
-        <Category />
-        <Nav />
-        <List />
-        {reformatProps.previewEnabled && <Preview />}
-      </Wrapper>
+      <WorkingProvider>
+        <Wrapper>
+          <Category />
+          <Nav />
+          <List />
+          {reformatProps.previewEnabled && <Preview />}
+        </Wrapper>
+      </WorkingProvider>
     </ConfigProvider>
   );
 }

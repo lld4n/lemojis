@@ -1,10 +1,11 @@
 import type {
   emojiPickPropsOptionalType,
   emojiPickPropsType,
+  emojiReturnType,
 } from "../types/emoji";
 
-const clickDefault = () => {
-  console.log(123);
+const clickDefault = (emoji: emojiReturnType) => {
+  console.log(emoji.unified);
 };
 
 export default function (

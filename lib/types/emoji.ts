@@ -1,3 +1,9 @@
+import React from "react";
+
+export interface emojiReturnType {
+  unified: string;
+}
+
 export interface emojiPickPropsType {
   theme: emojiPickThemeType;
   skinTonesEnabled: boolean;
@@ -14,7 +20,7 @@ export interface emojiPickPropsType {
   emojiVersion: string;
   defaultTone: emojiPickToneType;
   lazyLoad: boolean;
-  click: () => void;
+  click: (emoji: emojiReturnType) => void;
 }
 
 export type emojiPickPropsOptionalType = Partial<emojiPickPropsType>;
@@ -57,3 +63,8 @@ export type categoryType =
   | "Objects"
   | "Symbols"
   | "Flags";
+
+export type workingContext = {
+  preview: string;
+  setPreview: React.Dispatch<React.SetStateAction<string>>;
+};
