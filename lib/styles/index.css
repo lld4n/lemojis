@@ -11,11 +11,13 @@
 @media (prefers-color-scheme: dark) {
   .ac421ee2 {
     --ac421ee2-bg: #101216;
+    --ac421ee2-bg-opacity: rgba(16, 18, 22, 0.8);
     --ac421ee2-gray: #2b2f35;
-    --ac421ee2-light-gray: #1e2228;
-    --ac421ee2-accent: #0085ee;
-    --ac421ee2-light-accent: #eaf5ff;
+    --ac421ee2-light-gray: #05080c;
+    --ac421ee2-light-accent: #141d2d;
+    --ac421ee2-accent: #2b5eae;
     --ac421ee2-text: #fff;
+    --ac421ee2-hover: #2a2d33;
   }
 }
 .ac421ee2[data-theme="dark"] {
